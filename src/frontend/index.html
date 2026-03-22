@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Screen Pro</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <div class="app-container">
+        <header class="glass-panel main-header">
+            <div class="logo">
+                <div class="logo-icon">🚀</div>
+                <div>
+                    <h1>AI Resume Screen</h1>
+                    <p class="subtitle">Intelligent Top-K Semantic Candidate Ranking</p>
+                </div>
+            </div>
+            <div class="badge">MLOps v3.0</div>
+        </header>
+
+        <main class="dashboard">
+            <!-- Left Side: Inputs -->
+            <section class="glass-panel input-section">
+                <h2>Configure & Run</h2>
+                
+                <div class="form-group">
+                    <label for="jd-input">Job Description</label>
+                    <textarea id="jd-input" placeholder="Paste the detailed Job Description here. Include necessary skills, requirements, and context..." rows="6"></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group half">
+                        <label for="top-k">Top K Candidates</label>
+                        <input type="number" id="top-k" value="5" min="1" max="50">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Upload Resumes (PDF, DOCX)</label>
+                    <div class="file-drop-area" id="drop-area">
+                        <div class="upload-icon">📄</div>
+                        <p>Drag & drop resumes here or <span class="highlight">browse</span></p>
+                        <input type="file" id="file-input" multiple accept=".pdf,.docx,.txt" hidden>
+                        <p class="file-count" id="file-count">0 files selected</p>
+                    </div>
+                </div>
+
+                <button id="submit-btn" class="primary-btn">
+                    <span class="btn-text">Screen Candidates</span>
+                    <span class="loader" style="display: none;"></span>
+                </button>
+            </section>
+
+            <!-- Right Side: Results -->
+            <section class="results-section">
+                <div class="glass-panel stats-panel" id="stats-panel" style="display: none;">
+                    <div class="stat-box">
+                        <span class="stat-value" id="stat-processed">0</span>
+                        <span class="stat-label">Processed</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-value" id="stat-returned">0</span>
+                        <span class="stat-label">Top-K</span>
+                    </div>
+                    <div class="stat-box highlight-stat">
+                        <span class="stat-value" id="stat-best">0%</span>
+                        <span class="stat-label">Best Match</span>
+                    </div>
+                </div>
+
+                <div class="candidates-list" id="candidates-container">
+                    <div class="empty-state">
+                        <div class="empty-icon">✨</div>
+                        <h3>Ready to evaluate</h3>
+                        <p>Upload resumes and provide a JD to see the AI rankings!</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
