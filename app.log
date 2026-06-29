@@ -37,3 +37,19 @@
 2026-03-22 10:59:41,430 - api.main - INFO - Shutting down API...
 2026-03-22 10:59:41,431 - database - INFO - Closing MongoDB connection...
 2026-03-22 10:59:41,497 - database - INFO - MongoDB connection closed.
+2026-06-29 22:40:39,619 - models.predict - INFO - Loading embedding model: all-MiniLM-L6-v2
+2026-06-29 22:41:02,500 - models.predict - INFO - Model loaded successfully.
+2026-06-29 22:41:02,531 - api.main - INFO - Starting up API...
+2026-06-29 22:41:02,531 - database - INFO - Connecting to MongoDB...
+2026-06-29 22:41:02,984 - database - INFO - Connected to MongoDB!
+2026-06-29 22:47:08,441 - api.routes - INFO - Received prediction request with 2 resumes. Top K: 1
+2026-06-29 22:47:10,193 - api.routes - INFO - Saved resume Chaitanya_Mule_Resume.pdf to DB.
+2026-06-29 22:47:11,900 - api.routes - INFO - Saved resume PRATIKSHAResume .pdf to DB.
+2026-06-29 22:47:11,961 - api.routes - INFO - Saved prediction history to DB.
+2026-06-29 22:47:29,179 - api.routes - INFO - Received prediction request with 2 resumes. Top K: 2
+2026-06-29 22:47:30,440 - api.routes - INFO - Saved resume Chaitanya_Mule_Resume.pdf to DB.
+2026-06-29 22:47:31,969 - api.routes - INFO - Saved resume PRATIKSHAResume .pdf to DB.
+2026-06-29 22:47:31,972 - api.routes - INFO - Saved prediction history to DB.
+2026-06-29 22:53:22,343 - api.main - INFO - Shutting down API...
+2026-06-29 22:53:22,344 - database - INFO - Closing MongoDB connection...
+2026-06-29 22:53:22,411 - database - INFO - MongoDB connection closed.

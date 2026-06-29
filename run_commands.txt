@@ -1,0 +1,25 @@
+Option A: Using Docker (Recommended)
+If you have Docker Desktop installed, you can start the entire stack (FastAPI Backend, MongoDB, and MLflow) with a single command:
+
+Open your terminal in the project root directory.
+Run the following command:
+bash
+
+
+docker-compose up --build
+Once the services start, open http://127.0.0.1:8000/ in your browser. It will automatically redirect you to the UI.
+Option B: Running Locally (Without Docker)
+If you want to run it directly on your Windows machine:
+
+Open PowerShell in your project root directory and activate the virtual environment:
+powershell
+
+
+.\venv\Scripts\Activate.ps1
+Make sure your dependencies and the spaCy language model are installed:
+pip install -r requirements.txt
+python -m spacy download en_core_web_sm
+Run the FastAPI server:
+uvicorn src.api.main:app --reload
+(Note: Ensure you have a MongoDB instance running locally at mongodb://localhost:27017, as the application saves resume and prediction records to it).
+Open http://127.0.0.1:8000/ in your browser.

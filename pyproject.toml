@@ -1,2 +1,8 @@
-[tool.vercel]
-entrypoint = "src.api.main:app"
+[project]
+name = "ai-resume-screening-system"
+version = "0.1.0"
+description = "AI Resume Screening System"
+requires-python = ">=3.10"
+dependencies = [
+    "scikit-learn",
+]
